@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		/*var sum=0;
+		var avg;
+		var num=[20,44,77,88];
+		for(var i=0;i<num.length;i++)
+		{
+			sum+=num[i];
+		}
+		avg=sum/num.length;
+		console.log('和:'+sum);
+		console.log('平均值:'+avg);*/
+		var num=[33,88,77,55,34,11];
+		var max=num[0];
+		var min=num[0];
+		var maxIndex;
+		var minIndex;
+		for(var i=1;i<num.length;i++)
+		{
+			if(max<num[i])
+			{
+				max=num[i];
+				maxIndex=i;
+			}
+			if(min>num[i])
+			{
+				min=num[i];
+				minIndex=i;
+			}
+		}
+		console.log('最大值:'+max+'最小值:'+min);
+		console.log('最大值第:'+maxIndex+'个。'+'最小值第:'+minIndex+'个。');
+	</script>
+</head>
+<body>
+
+</body>
+</html>
