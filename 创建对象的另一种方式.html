@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	// 对象名 属性名 方法 new Object() 方法2
+		var dog = new Object();
+			dog.name = '大黄';
+			dog.color = '黄色';
+			dog.color = '香肠';
+			dog.run = function () {
+				console.log(this.name + '喜欢吃香肠');
+			}
+		dog.run();
+
+
+	//创建自定义构造函数 当要使用的参数很多的时候
+	function cat(name, color , food) {
+		this.name = name;
+		this.color = color;
+		this.food = food;
+
+		this.run = function () {
+			console.log('这只猫叫' + this.name + '迷人的' + this.color + '非常喜欢吃' + this.food);
+		}
+	}
+	var cat1 = new cat ('加菲猫' , '橘色' , '千层饼');
+	cat1.run();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

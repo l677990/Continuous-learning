@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		//写一个学生信息管理的 自定义构造函数
+	function stu(name ,sex ,age ,fraction) {
+		this.name = name;
+		this.sex = sex;
+		this.age = age;
+		this.fraction = fraction;
+		  this.cj = function () {
+		  	console.log(this.name + this.sex + this.age +'岁在本次考试中' + this.fraction + '分');
+		  }
+	}
+	var cj1 = new stu('lmk','男','17','150');  //上面的this指向刚刚创建的对象
+	//new的执行过程
+	//1 在内存中创建了一个空的对象
+	//2 让构造函数中的this指向刚刚创建的对象
+	//3 执行构造函数,在构造函数中设置属性和方法(当然也可以做其他事情)
+	//4 返回了当前对象
+	cj1.cj();
+	</script>
+</head>
+<body>
+
+</body>
+</html>
