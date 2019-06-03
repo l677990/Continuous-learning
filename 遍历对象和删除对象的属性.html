@@ -4,17 +4,32 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<script>
-	var cat = {
-		name :'加菲猫',
-		color : '橘黄色',
-		foot :'千层饼',
-		run:function () {
-			console.log(this.name + 'hellow');
-		},
+	// var cat = {
+	// 	name :'加菲猫',
+	// 	color : '橘黄色',
+	// 	foot :'千层饼',
+	// 	run:function () {
+	// 		console.log(this.name + 'hellow');
+	// 	},
+	// }
+	// for (var key in cat){
+	// 	console.log(key + cat[key]);
+	// }
+
+
+
+	function stu (name,age,sex) {
+		this.name = name;
+		this.age = age;
+		this.sex = sex;
+		this.run = function () {
+			console.log(this.name);
+		}
 	}
-	for (var key in cat){
-		console.log(key + cat[key]);
-	}
+	var p1 = new stu ('zs',12,'男');
+	var p2 = p1;
+	p1 = 'ls';
+	console.log(p1);
 	</script>
 </head>
 <body>
