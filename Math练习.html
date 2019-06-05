@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		//随机生成数字
+		function random(min, max) {
+			return Math.floor(Math.random()*(max - min +1)+min);
+		}
+		//生成随机颜色rgb [0,255] 整数
+		function randomRGB(min,max) {
+			var	color1= random(min,max);
+			var	color2= random(min,max);
+			var	color3= random(min,max);
+			return 'rgb('+color1+','+color2+','+color3+')'
+		}
+		console.log(random(0,255));
+
+		//模拟实现max()、min（）
+		var qiu = {
+			 max: function() {
+				var max = arguments[0];
+				for(var i = 1 ; i < arguments.length ; i++)
+				{
+					if(max<arguments[i]) {
+						max = arguments[i];
+					}
+				}
+				return max;
+			},
+				min:function () {
+				var min = arguments[0];
+				for(var i = 1; i < arguments.length; i++) {
+					if(min<arguments[i]) {
+						min = arguments[i];
+					}
+				}
+				return min;
+			}
+
+		}
+		console.log(qiu.max(12,1515,31236,1561));
+	</script>
+</head>
+<body>
+
+</body>
+</html>
